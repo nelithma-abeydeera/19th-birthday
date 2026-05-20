@@ -1,0 +1,174 @@
+/* ========================================== */
+/* 1. GLOBAL THEME SETTINGS                   */
+/* ========================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    background-color: #FDF1B8 !important; /* Forces the warm pastel yellow background */
+    color: #000000;
+    overflow-x: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* ========================================== */
+/* 2. REUSED SCRAPBOOK NAVBAR                 */
+/* ========================================== */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #F3B63A; /* Mustard yellow tab */
+    padding: 15px 30px;
+    border-bottom-left-radius: 15px; 
+    display: flex;
+    gap: 20px; 
+    z-index: 10;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ========================================== */
+/* 3. GLOBAL BUTTON STYLING (USED ACROSS PAGES)*/
+/* ========================================== */
+.continue-btn, .flowers-btn-next, .card-btn-secondary {
+    background-color: #FFAE42; /* Soft pill orange */
+    color: white !important;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 60px;
+    border-radius: 30px; 
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.2s;
+    display: inline-block;
+    border: none;
+}
+
+.continue-btn:hover, .flowers-btn-next:hover, .card-btn-secondary:hover {
+    background-color: #FA9C1B;
+    transform: scale(1.05); 
+}
+
+/* ========================================== */
+/* 4. HOME PAGE LAYOUT (`index.html`)         */
+/* ========================================== */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-frame {
+    width: 320px;
+    height: 420px;
+    background-color: #A3C9A8; 
+    border-radius: 20px; 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.right-side {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.birthday-text {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.teddy-bear {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 150px; 
+    height: auto;
+}
+
+/* ========================================== */
+/* 5. FLOWERS PAGE LAYOUT (`flowers.html`)    */
+/* ========================================== */
+.flowers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 80px; 
+    box-sizing: border-box;
+}
+
+.main-flower-img {
+    width: 350px; 
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.flower {
+    position: absolute;
+    width: 160px; 
+    height: auto;
+    z-index: 1; 
+}
+
+.top-left { top: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+/* ========================================== */
+/* 6. FAVOURITE THINGS LAYOUT (`favourite.html`)*/
+/* ========================================== */
+.fav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 120px 20px 40px 20px; 
+    box-sizing: border-box;
+}
+
+.fav-title {
+    font-size: 2.2rem;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
