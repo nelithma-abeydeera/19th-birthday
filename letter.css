@@ -1,6 +1,8 @@
 /* ========================================== */
-/* 1. GLOBAL THEME SETTINGS                   */
+/* MASTER STYLE GUIDE - letter.css            */
 /* ========================================== */
+
+/* 1. GLOBAL THEME SETTINGS */
 html, body {
     margin: 0;
     padding: 0;
@@ -14,9 +16,11 @@ html, body {
     box-sizing: border-box;
 }
 
-/* ========================================== */
-/* 2. REUSED SCRAPBOOK NAVBAR                 */
-/* ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. REUSED SCRAPBOOK NAVBAR */
 .navbar {
     position: absolute;
     top: 0;
@@ -42,12 +46,10 @@ html, body {
     font-weight: bold;
 }
 
-/* ========================================== */
-/* 3. GLOBAL BUTTON STYLING (USED ACROSS PAGES)*/
-/* ========================================== */
+/* 3. GLOBAL BUTTON STYLING */
 .continue-btn, .flowers-btn-next, .card-btn-secondary {
     background-color: #FFAE42; /* Soft pill orange */
-    color: white;
+    color: white !important;
     text-decoration: none;
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
@@ -67,9 +69,7 @@ html, body {
     transform: scale(1.05); 
 }
 
-/* ========================================== */
-/* 4. HOME PAGE LAYOUT (`index.html`)         */
-/* ========================================== */
+/* 4. HOME PAGE LAYOUT (`index.html`) */
 .main-container {
     display: flex;
     align-items: center;
@@ -124,9 +124,7 @@ html, body {
     height: auto;
 }
 
-/* ========================================== */
-/* 5. FLOWERS PAGE LAYOUT (`flowers.html`)    */
-/* ========================================== */
+/* 5. FLOWERS PAGE LAYOUT (`flowers.html`) */
 .flowers-container {
     display: flex;
     flex-direction: column;
@@ -153,9 +151,7 @@ html, body {
 .top-left { top: 0; left: 0; }
 .bottom-right { bottom: 0; right: 0; }
 
-/* ========================================== */
-/* 6. FAVOURITE THINGS LAYOUT (`favourite.html`)*/
-/* ========================================== */
+/* 6. FAVOURITE THINGS LAYOUT (`favourite.html`) */
 .fav-container {
     display: flex;
     flex-direction: column;
@@ -171,4 +167,101 @@ html, body {
     color: #000000;
     letter-spacing: 2px;
     margin-bottom: 40px;
-    text-align: center;}
+    text-align: center;
+}
+
+.fav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    max-width: 600px; 
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.fav-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.45); 
+    padding: 18px 25px;
+    border-radius: 15px;
+    border: 1px dashed #F3B63A; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.fav-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5E0E; 
+    margin-right: 20px;
+    border-right: 2px solid #F3B63A;
+    padding-right: 15px;
+}
+
+.fav-text {
+    font-size: 1.1rem;
+    color: #222222;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.decor {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.top-left-decor { top: 20px; left: 20px; }
+.bottom-right-decor { bottom: 20px; right: 20px; }
+
+/* 7. LETTER PAGE STYLING (`letter.html`) */
+.letter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 120px 20px 40px 20px; 
+    box-sizing: border-box;
+}
+
+.letter-paper {
+    background-color: #ffffff; 
+    max-width: 650px;
+    width: 100%;
+    padding: 50px 40px;
+    border-radius: 8px; 
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08); 
+    border-left: 5px solid #F3B63A; 
+    position: relative;
+}
+
+.letter-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.letter-content p {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    color: #333333;
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.letter-signature {
+    margin-top: 40px !important;
+    margin-bottom: 5px !important;
+    font-style: italic;
+}
+
+.letter-signature-name {
+    font-weight: bold;
+    color: #FF5E0E; 
+    font-size: 1.25rem !important;
+    margin-top: 0 !important;
+}
